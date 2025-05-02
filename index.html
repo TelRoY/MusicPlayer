@@ -1,53 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kenia&display=swap">
-    <link rel="icon" type="image/svg+xml" href="img\MP.png"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kenia&display=swap"
+    />
+    <link rel="icon" type="image/svg+xml" href="img\MP.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MusicPlayer</title>
   </head>
   <body>
     <header class="header">
-
-      <!-- <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="img\MP.png"
-              alt="Logo"
-              width="53"
-              height="80"
-              class="d-inline-block align-text-center"
-            />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Переключить навигацию">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Music Player</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">MUSIC</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">STORE</a>
-                </li>         
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav> -->
-
-
-
       <nav class="navbar navbar-expand-lg navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -73,9 +37,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"
-                  >HOME
-                </a>
+                <a class="nav-link" aria-current="page" href="#">HOME </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">MUSIC</a>
@@ -94,38 +56,110 @@
 
     <main>
       <section class="hero">
-        <div class="hero_container">
+        <div class="container" id="hero_container">
           <div class="hero_content">
-            <h1 class="hero_title">MUSIC PLAYER</h1>
+            <h1 class="hero_title">
+              MUSIC <br />
+              PLAYER
+            </h1>
             <div class="hero_text">
-              American company formed in <br> 2002 in Boston, Massachusetts
+              American company formed in <br />
+              2002 in Boston, Massachusetts
             </div>
           </div>
           <div class="hero_picture">
-            <img src="img\Flat iPhone 1.png" alt="iphone" id="iphone">
-            <img src="img\kabel_apple.png" alt="kabel_apple" id="kabel_apple">
+            <img src="img\Flat iPhone 1.png" alt="iphone" id="iphone" class="img-fluid"/>
+            <img src="img\kabel_apple.png" alt="kabel_apple" id="kabel_apple" class="img-fluid"/>
           </div>
         </div>
-
       </section>
 
-      <section>
+      <section class="music">
+        <h2 class="title">Music</h2>
 
+        <div class="container">
+          <div class="music_content">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              LISTEN NOW
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              FIND A SONG...
+            </button>
+          </div>
+          <div class="music_picture">
+            <img
+              src="img\seyi-ariyo.png"
+              alt=""
+              style="max-width: 1000px; max-height: 666px"
+              class="img-fluid"
+            />
+          </div>
+        </div>
       </section>
 
-      <section>
-
+      <section class="about">
+        <h2 class="title">About</h2>
+        <div class="about_content">
+          <div class="about_text">
+            MusicPlayer gives you instant access to millions of songs – from old
+            <br />
+            favorites to the latest hits. Just hit play to stream anything you like.
+          </div>
+        </div>
       </section>
+
+      <section class="store">
+        <h2 class="title">Store</h2>
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="col-lg-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <button type="button" class="btn btn-dark rounded-5 w-50">Download <br> Windows x64</button>
+            </div>
+            <div class="d-flex justify-content-center mb-5">
+              <button type="button" class="btn btn-light rounded-5 w-50">Download <br> MacOS</button>
+            </div>
+            <div class="row justify-content-center mb-3">
+              Нужна предыдущая версия MPlayer?
+            </div>
+            <div class="row justify-content-center mb-3">
+              Вы можете скачать одну из предыдущих версий MPlayer, которая совместима с нужной вам версией операционной системы и определёнными устройствами.
+            </div>
+            <div class="row justify-content-center mb-3">
+              <a href="#" target="_blank" rel="noopener noreferrer">Выберите предыдущую версию MPlayer</a>
+            </div>
+          </div>
+          <div class="about_picture">
+            <img
+              src="img\Device - Macbook Pro.png"
+              alt=""
+              style="max-width: 1000px; max-height: 666px"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+
+      
+
     </main>
 
-    <footer>
-
-    </footer>
-
-
-
-
-
+    <footer></footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
