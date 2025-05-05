@@ -1,14 +1,228 @@
-html {
-  max-width: 1440px;
-  /* max-height: 1024px; */
-  font-size: 16px;
-  margin: 0 auto;
+@font-face {
+  font-family: 'Kenia';
+  src: url('fonts\Kenia-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Karla';
+  src: url('fonts\Karla-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  src: url('fonts\IstokWeb-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts\Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts\Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts\Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  /* Шапка */
+  header {
+    padding-left: 20px;
+  }
+  
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+  }
+  
+  a.nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Герой-секция */
+  #hero_container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px !important;
+  }
+  
+  .hero_title {
+    font-size: 80px;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  
+  .hero_text {
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .hero_picture {
+    text-align: center;
+  }
+  
+  #iphone {
+    max-width: 300px;
+  }
+  
+  #kabel_apple {
+    max-width: 200px;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Музыкальная секция */
+  .music {
+    height: auto;
+    padding: 80px 20px;
+  }
+  
+  .title {
+    padding-left: 20px;
+    padding-top: 40px;
+    font-size: 24px;
+  }
+  
+  .container {
+    padding-left: 20px !important;
+    flex-direction: column;
+  }
+  
+  #button-music1, #button-music2 {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    font-size: 24px;
+    margin: 10px auto;
+  }
+  
+  .music_picture img {
+    position: static;
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  /* Остальные секции */
+  .about, .store {
+    height: auto;
+    padding: 80px 20px;
+    line-height: 1.5;
+  }
+  
+  #button-store1, #button-store2 {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Подвал */
+  .top {
+    flex-direction: column;
+  }
+  
+  .col-lg-4 {
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    padding: 40px 20px;
+  }
+
+  #foot {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #foot a {
+    margin: 5px 0;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    margin-bottom: 15px;
+  }
+}
+
+/* Планшеты (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero_container {
+    gap: 30%;
+  }
+  
+  a.nav-link {
+    margin-left: 0;
+  }
+
+  .hero_title {
+    font-size: 100px;
+  }
+  
+  #iphone {
+    max-width: 400px;
+  }
+  
+  .container {
+    padding-left: 60px !important;
+  }
+}
+
+html {
+  background-color: #bdb8b8;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.container {
+  padding: 0 0 0 122px !important;
+  margin: 0 !important;
+}
+
+.title {
+  position: absolute;
+  padding-left: 122px;
+  padding-top: 83px;
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 30px;
+}
+
+/* H E R O  */
 
 header {
   background-image: url(img/Desktop.png);
-  z-index: 50;
   padding-left: 122px;
+  font-family: 'Istok Web';
 }
 
 a.nav-link {
@@ -22,10 +236,7 @@ a.nav-link {
 
 #hero_container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  gap: 55%;
-  max-width: 500px;
 }
 
 .hero_content {
@@ -37,23 +248,20 @@ a.nav-link {
 
 .hero_title {
   font-size: 150px;
-  font-family: 'Kenia', Kenia, sans-serif;
+  font-family: 'Kenia', sans-serif;
 }
 
 .hero_text {
   font-size: 20px;
-  font-family: 'Istok Web';
+  font-family: 'Istok Web', sans-serif;
 }
 
 .hero_picture {
   position: relative;
   z-index: 50;
-  padding: 0;
-  margin: 0;
 }
 
 #iphone {
-  max-width: 500px; 
   max-height: 850px;
 }
 
@@ -65,61 +273,137 @@ a.nav-link {
   z-index: -1;
 }
 
+/* M U S I C */
+
 .music {
-  display: flexbox;
   background: #D53005;
   height: 1024px;
 }
 
-.title {
-  padding-left: 122px;
-  padding-top: 83px;
+#button-music1, #button-music2 {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 382px;
+  height: 83px;
+  box-shadow: -4px -4px 30px 0 rgba(255, 255, 255, 0.1), 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+  background: radial-gradient(98% 134.85% at 1.57% 7.83%, rgb(177, 62, 24) 0%, rgb(243, 80, 26) 100%);
+  font-size: 40px;
+  font-family: 'Karla', sans-serif;
   color: white;
-}
-
-.container {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 0 0 0 122px !important;
-  margin: 0 !important;
-}
-
-.music_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.music_picture {
-  display: flex;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, #D53005 0%, #000 6%);
-  height: 1024px;
-  width: 100%;
-}
-
-.about_content {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  transition: all 0.3s ease;
 }
 
-.about_text {
-  color: white;
-  font-size: 30px;
-  font-family: "Karla";
+#button-music1:hover, #button-music2:hover {
+  transform: translateY(-2%);
+  box-shadow: -8px -8px 40px 0 rgba(255, 255, 255, 0.1), 8px 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
+
+#button-music1:active, #button-music2:active {
+  transform: scale(0.96);
+}
+
+.music_picture img {
+  position: relative;
+  z-index: 50;
+  top: 81%; right: 8%;
+}
+
+/* A B O U T  */
+
+.about {
+  background: linear-gradient(to bottom, #D53005 0%, #000 6%);
+  height: 1024px;
+  font-family: 'Karla', sans-serif;
+  color: white; 
+  font-size: 30px;
+}
+
+/* S T O R E  */
 
 .store {
+  background: #D53005;
+  height: 1024px;
+}
+
+#button-store1, #button-store2 {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 240px;
+  height: 60px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+#button-store1:hover, #button-store2:hover {
+  color: #D53005;
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+.store p:first-of-type {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.store p, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* F O O T E R  */
+
+footer {
+  background: linear-gradient(to bottom, #D53005 0%, #000 6%);
+  color: white !important;
+  padding-top: 100px;
+  padding-bottom: 74px;
+}
+
+.card-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.links {
   display: flex;
   flex-direction: column;
-  background: #D53005;
-  /* height: 1024px; */
+  line-height: 40px;
   width: 100%;
+}
+
+#top a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #bdb8b8;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Kenia';
+  font-size: 50px;
+}
+
+#foot p, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: white; 
+  text-decoration: none;
+}
+
+.d-flex {
+  justify-content: space-between;
 }

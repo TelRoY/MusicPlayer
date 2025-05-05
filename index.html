@@ -2,60 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kenia&display=swap"
-    />
     <link rel="icon" type="image/svg+xml" href="img\MP.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <title>MusicPlayer</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navigation">
+    <header class="header sticky-top">
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img
-              src="img\MP.png"
-              alt="Logo"
-              width="53"
-              height="80"
-              class="d-inline-block align-text-center"
-            />
+            <img src="img\MP.png" alt="Logo" width="53" height="80" />
           </a>
           <button
-            class="navbar-toggler me-2"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
             aria-label="Переключатель навигации"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">HOME </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">MUSIC</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">STORE</a>
-              </li>
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <a class="nav-link" aria-current="page" href="#home">HOME</a>
+            <a class="nav-link" href="#music">MUSIC</a>
+            <a class="nav-link" href="#about">ABOUT</a>
+            <a class="nav-link" href="#store">STORE</a>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="container" id="hero_container">
           <div class="hero_content">
             <h1 class="hero_title">
@@ -68,98 +51,209 @@
             </div>
           </div>
           <div class="hero_picture">
-            <img src="img\Flat iPhone 1.png" alt="iphone" id="iphone" class="img-fluid"/>
-            <img src="img\kabel_apple.png" alt="kabel_apple" id="kabel_apple" class="img-fluid"/>
+            <img
+              src="img\Flat iPhone 1.png"
+              alt="iphone"
+              id="iphone"
+              class="img-fluid"
+            />
+            <img
+              src="img\kabel_apple.png"
+              alt="kabel_apple"
+              id="kabel_apple"
+              class="img-fluid"
+            />
           </div>
         </div>
       </section>
 
-      <section class="music">
+      <section class="music" id="music">
         <h2 class="title">Music</h2>
-
-        <div class="container">
-          <div class="music_content">
-            <button
-              type="button"
-              class="btn btn-primary"
-              style="
-                --bs-btn-padding-y: 0.25rem;
-                --bs-btn-padding-x: 0.5rem;
-                --bs-btn-font-size: 0.75rem;
-              "
-            >
-              LISTEN NOW
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              style="
-                --bs-btn-padding-y: 0.25rem;
-                --bs-btn-padding-x: 0.5rem;
-                --bs-btn-font-size: 0.75rem;
-              "
-            >
-              FIND A SONG...
-            </button>
-          </div>
-          <div class="music_picture">
-            <img
-              src="img\seyi-ariyo.png"
-              alt=""
-              style="max-width: 1000px; max-height: 666px"
-              class="img-fluid"
-            />
+        <div class="container d-flex p-0 h-100">
+          <div
+            class="container d-flex justify-content-space-between align-items-center"
+          >
+            <div class="col-lg-4 text-center">
+              <button type="button" class="btn-primary mb-5" id="button-music1">
+                Listen now
+              </button>
+              <button type="button" class="btn-primary" id="button-music2">
+                Find a song...
+              </button>
+            </div>
+            <div class="music_picture">
+              <img
+                src="img\seyi-ariyo.png"
+                alt="plastinka"
+                style="max-width: 1000px; max-height: 666px"
+                class="img-fluid"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="title">About</h2>
-        <div class="about_content">
-          <div class="about_text">
-            MusicPlayer gives you instant access to millions of songs – from old
-            <br />
-            favorites to the latest hits. Just hit play to stream anything you like.
+        <div
+          class="container d-flex justify-content-center align-items-center h-100"
+        >
+          <div class="col-lg-9">
+            <article>
+              <p>
+                MusicPlayer gives you instant access to millions of songs – from
+                old favorites to the latest hits. Just hit play to stream
+                anything you like.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="store">
+      <section class="store" id="store">
         <h2 class="title">Store</h2>
-        <div class="container d-flex justify-content-center align-items-center">
-          <div class="col-lg-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <button type="button" class="btn btn-dark rounded-5 w-50">Download <br> Windows x64</button>
+        <div class="container d-flex p-0 h-100">
+          <div class="container d-flex p-0 align-items-center">
+            <div class="col-lg-4 text-center" style="padding-left: 25px">
+              <div class="d-flex mb-3 justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-dark rounded-5 mb-4"
+                  id="button-store1"
+                >
+                  Download <br />
+                  Windows x64
+                </button>
+              </div>
+              <div class="d-flex mb-5 justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-light rounded-5 mb-5"
+                  id="button-store2"
+                >
+                  Download <br />
+                  MacOS
+                </button>
+              </div>
+              <p style="font-size: 20px; color: white">
+                Нужна предыдущая версия MPlayer?
+              </p>
+              <p style="font-size: 18px; color: white">
+                Вы можете скачать одну из предыдущих версий MPlayer, которая
+                совместима с нужной вам версией операционной системы и
+                определёнными устройствами.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="font-size: 18px; color: black"
+              >
+                Выберите предыдущую версию MPlayer
+              </a>
             </div>
-            <div class="d-flex justify-content-center mb-5">
-              <button type="button" class="btn btn-light rounded-5 w-50">Download <br> MacOS</button>
+            <div class="about_picture">
+              <img
+                src="img\Device - Macbook Pro.png"
+                alt="Macbook"
+                style="max-width: 1168px; max-height: 685px"
+                class="img-fluid"
+              />
             </div>
-            <div class="row justify-content-center mb-3">
-              Нужна предыдущая версия MPlayer?
-            </div>
-            <div class="row justify-content-center mb-3">
-              Вы можете скачать одну из предыдущих версий MPlayer, которая совместима с нужной вам версией операционной системы и определёнными устройствами.
-            </div>
-            <div class="row justify-content-center mb-3">
-              <a href="#" target="_blank" rel="noopener noreferrer">Выберите предыдущую версию MPlayer</a>
-            </div>
-          </div>
-          <div class="about_picture">
-            <img
-              src="img\Device - Macbook Pro.png"
-              alt=""
-              style="max-width: 1000px; max-height: 666px"
-              class="img-fluid"
-            />
           </div>
         </div>
       </section>
-
-      
-
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="container-fluid d-flex p-5 justify-content-center">
+        <div class="row" id="top">
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">MPlayer Store</h5>
+              <div class="links">
+                <a href="#" class="card-link">Варианты оплаты</a>
+                <a href="#" class="card-link">Состояние заказа</a>
+                <a href="#" class="card-link">Помощь при покупке</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">Ценности MPlayer</h5>
+              <div class="links">
+                <a href="#" class="card-link">Универсальный доступ</a>
+                <a href="#" class="card-link">Окружающая среда</a>
+                <a href="#" class="card-link">Конфиденциальность</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <h5 class="card-title">Учетная запись</h5>
+              <div class="links">
+                <a href="#" class="card-link"
+                  >Управление вашим MPlayer ID</a
+                >
+                <a href="#" class="card-link"
+                  >Учетная запись MPlayer Store</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2 class="logo">
+          MUSIC <br />
+          PLAYER
+        </h2>
+      </div>
+
+      <div class="container d-flex" id="foot">
+        <p>c MPlayer Inc., 2022 г. Все права защищены.</p>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+          "
+          >Условия использования</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+          "
+          >Продажа и возврат</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+          "
+          >Юридическая информация</a
+        >
+      </div>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
